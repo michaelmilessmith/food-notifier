@@ -12,3 +12,8 @@ The amazinbg Food Notifier app will let you know real time when the food is read
 - Raspbery Pi
 - NodeJS
 - Slack API
+
+###Running the app
+
+  npm install
+  node .
