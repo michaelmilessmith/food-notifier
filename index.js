@@ -29,8 +29,7 @@ app.post('/yum', upload.single('food'), (req, res, next) => {
 
       // assemble message
       const slackMessage = {
-        "text": "Food is ready " + link,
-        "icon_emoji" : ":hamburger:"
+        "text": "Food is ready! " + link
       };
 
       const slackOptions = {
@@ -42,6 +41,9 @@ app.post('/yum', upload.single('food'), (req, res, next) => {
       request.post(slackOptions)
         .then((response) => {
           console.log('message posted!');
+      }).catch((err) => {
+        console.log(err);
+        res.status(500).send();
       });
 
     })
