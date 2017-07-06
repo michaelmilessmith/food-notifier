@@ -1,19 +1,19 @@
 ### YOU HUNGRY???
-###🍔 Food notifier 🍔
+### 🍔 Food notifier 🍔
 - Authors: Mike, Tom and Denise
 - Thursday, 6th of July 2017
 
-###Description
+### Description
 
 Never be too early or too late in the canteen again!
 The amazinbg Food Notifier app will let you know real time when the food is ready to be served.
 
-###Tech stack
+### Tech stack
 - Raspbery Pi
 - NodeJS
 - Slack API
 
-###Running the app
+### Running the app
 
-  npm install
-  node .
+    npm install
+    node .
