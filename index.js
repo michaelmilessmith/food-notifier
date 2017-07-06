@@ -27,13 +27,35 @@ app.post('/yum', upload.single('food'), (req, res, next) => {
       console.log('link ',link);
       res.status(200).send();
 
-      // assemble message
       const slackMessage = {
-        "text": "Food is ready! " + link
+        "text": link,
+        "attachments": [
+        {
+          "text": "grubs up :pizza:",
+          "fallback": "You are unable to vote",
+          "callback_id": "yay_nay",
+          "color": "#3AA3E3",
+          "attachment_type": "default",
+          "actions": [
+            {
+              "name": "yayornay",
+              "text": ":+1:",
+              "type": "button",
+              "value": "yay"
+            },
+            {
+              "name": "yayornay",
+              "text": ":-1:",
+              "type": "button",
+              "value": "nay"
+            }
+          ]
+        }
+      ]
       };
 
       const slackOptions = {
-        url: 'https://hooks.slack.com/services/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',
+        url: 'https://hooks.slack.com/services/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',
         form: JSON.stringify(slackMessage)
       };
 
